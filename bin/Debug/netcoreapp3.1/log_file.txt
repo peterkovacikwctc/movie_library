@@ -8,3 +8,6 @@
 2020-09-15 07:33:40.2213|FATAL|movie_library.Program|Sample fatal error message
 2020-09-15 07:33:40.2213|INFO|movie_library.Program|Program ended
 2020-09-15 07:34:03.8908|INFO|movie_library.Program|Program ended
+2020-09-15 07:47:23.2990|INFO|movie_library.Program|Begin logger.
+2020-09-15 07:47:23.3462|INFO|movie_library.Program|File movies.csv does not exist.
+2020-09-15 07:47:23.3462|INFO|movie_library.Program|End program.
