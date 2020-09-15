@@ -18,25 +18,47 @@ namespace movie_library
             // movie data stored in "movies.csv"
             string file = "movies.csv";
             
-            // if movie file does not exist
+            // check if file exists
             if(!File.Exists(file)) {
                 logger.Info("The file " + file + " does not exist.");
             }
-            // if movie file exists
             else {
-                StringReader sr = new StringReader(file);
+                StreamReader sr = new StreamReader(file);
 
-                
                 // print menu
-                Console.WriteLine("Enter 1 to read data file.");
+                Console.WriteLine("Enter 1 to read movies from data file.");
                 Console.WriteLine("Enter 2 to add a movie to the file.");
                 Console.WriteLine("Enter anything else to quit.");
                 string choice = Console.ReadLine();
 
+                // read movies from data file
                 if (choice == "1") {
                     // skip first line of file
                     sr.ReadLine();
+
+                    while (!sr.EndOfStream) {
+                        string line = sr.ReadLine();
+                        string[] infoArray = line.Split(',');
+
+                        // movieID and title
+                        string movieID = infoArray[0];
+                        string title = infoArray[1];
+                        
+                        // genres
+                        string genreList = infoArray[2];
+                        string[] genreArray = genreList.Split('|');
+                        string seperator = ", ";
+                        string genres = "";
+                        genres += String.Join(seperator, genreArray);
+                        
+                        // output information
+                        Console.WriteLine($"Movie ID: {movieID}");
+                        Console.WriteLine($"Title: {title}");
+                        Console.WriteLine($"Genres: {genres}");
+                        Console.WriteLine("\n");
+                    }
                 }
+                // add movie to the file
                 else if (choice == "2") {
                     //assign movieID
                     int movieID;
@@ -49,7 +71,7 @@ namespace movie_library
 
                     string addGenre;
                     do {
-                        Console.WriteLine("\nWould you like to add another genere?");
+                        Console.WriteLine("\nWould you like to add another movie genre?");
                         Console.WriteLine("1) yes");
                         Console.WriteLine("2) no");
                         addGenre = Console.ReadLine();
