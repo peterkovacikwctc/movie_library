@@ -1,0 +1,16 @@
+/Users/peterkovacik/Documents/WCTC/dotNet database/movie_library/bin/Debug/netcoreapp3.1/movie_library.deps.json
+/Users/peterkovacik/Documents/WCTC/dotNet database/movie_library/bin/Debug/netcoreapp3.1/movie_library.runtimeconfig.json
+/Users/peterkovacik/Documents/WCTC/dotNet database/movie_library/bin/Debug/netcoreapp3.1/movie_library.runtimeconfig.dev.json
+/Users/peterkovacik/Documents/WCTC/dotNet database/movie_library/bin/Debug/netcoreapp3.1/movie_library.dll
+/Users/peterkovacik/Documents/WCTC/dotNet database/movie_library/bin/Debug/netcoreapp3.1/movie_library.pdb
+/Users/peterkovacik/Documents/WCTC/dotNet database/movie_library/bin/Debug/netcoreapp3.1/NLog.dll
+/Users/peterkovacik/Documents/WCTC/dotNet database/movie_library/bin/Debug/netcoreapp3.1/NLog.Extensions.Logging.dll
+/Users/peterkovacik/Documents/WCTC/dotNet database/movie_library/bin/Debug/netcoreapp3.1/NLog.Web.AspNetCore.dll
+/Users/peterkovacik/Documents/WCTC/dotNet database/movie_library/obj/Debug/netcoreapp3.1/movie_library.csprojAssemblyReference.cache
+/Users/peterkovacik/Documents/WCTC/dotNet database/movie_library/obj/Debug/netcoreapp3.1/movie_library.AssemblyInfoInputs.cache
+/Users/peterkovacik/Documents/WCTC/dotNet database/movie_library/obj/Debug/netcoreapp3.1/movie_library.AssemblyInfo.cs
+/Users/peterkovacik/Documents/WCTC/dotNet database/movie_library/obj/Debug/netcoreapp3.1/movie_library.csproj.CoreCompileInputs.cache
+/Users/peterkovacik/Documents/WCTC/dotNet database/movie_library/obj/Debug/netcoreapp3.1/movie_library.csproj.CopyComplete
+/Users/peterkovacik/Documents/WCTC/dotNet database/movie_library/obj/Debug/netcoreapp3.1/movie_library.dll
+/Users/peterkovacik/Documents/WCTC/dotNet database/movie_library/obj/Debug/netcoreapp3.1/movie_library.pdb
+/Users/peterkovacik/Documents/WCTC/dotNet database/movie_library/obj/Debug/netcoreapp3.1/movie_library.genruntimeconfig.cache
