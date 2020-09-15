@@ -23,7 +23,7 @@ namespace movie_library
                 logger.Info("The file " + file + " does not exist.");
             }
             else {
-                StreamReader sr = new StreamReader(file);
+               
 
                 // print menu
                 Console.WriteLine("Enter 1 to read movies from data file.");
@@ -33,32 +33,40 @@ namespace movie_library
 
                 // read movies from data file
                 if (choice == "1") {
-                    // skip first line of file
-                    sr.ReadLine();
+                    try {
+                        StreamReader sr = new StreamReader(file);
+                        // skip first line of file
+                        sr.ReadLine();
 
-                    while (!sr.EndOfStream) {
-                        string line = sr.ReadLine();
-                        string[] infoArray = line.Split(',');
+                        while (!sr.EndOfStream) {
+                            string line = sr.ReadLine();
+                            string[] infoArray = line.Split(',');
 
-                        // movieID and title
-                        string movieID = infoArray[0];
-                        string title = infoArray[1];
-                        
-                        // genres
-                        string genreList = infoArray[2];
-                        string[] genreArray = genreList.Split('|');
-                        string seperator = ", ";
-                        string genres = "";
-                        genres += String.Join(seperator, genreArray);
-                        
-                        // output information
-                        Console.WriteLine($"Movie ID: {movieID}");
-                        Console.WriteLine($"Title: {title}");
-                        Console.WriteLine($"Genres: {genres}");
-                        Console.WriteLine("\n");
+                            // movieID and title
+                            string movieID = infoArray[0];
+                            string title = infoArray[1];
+                            
+                            // genres
+                            string genreList = infoArray[2];
+                            string[] genreArray = genreList.Split('|');
+                            string seperator = ", ";
+                            string genres = "";
+                            genres += String.Join(seperator, genreArray);
+                            
+                            // output information
+                            Console.WriteLine($"Movie ID: {movieID}");
+                            Console.WriteLine($"Title: {title}");
+                            Console.WriteLine($"Genres: {genres}");
+                            Console.WriteLine("\n");
+                        }
+                        sr.Close();
+                    }
+                    catch (Exception e) {
+                        logger.Error(e.Message);
                     }
                 }
-                // add movie to the file
+
+                // add another movie to the file
                 else if (choice == "2") {
                     //assign movieID
                     int movieID;
@@ -81,7 +89,6 @@ namespace movie_library
                     Console.WriteLine("\nGoodbye!\n");
                 }
                 
-                sr.Close();
             }
             logger.Info("End program.");
         }
