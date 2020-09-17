@@ -11,7 +11,8 @@ namespace movie_library
             Console.WriteLine("Movie Library Application\n");
             
             // create instance of Logger
-            string path = "/Users/peterkovacik/Documents/WCTC/dotNet database/movie_library/nlog.config";
+            // string path = "/Users/peterkovacik/Documents/WCTC/dotNet database/movie_library/nlog.config"; // macOS
+            string path = Directory.GetCurrentDirectory() + "\\nlog.config"; // Windows 10
             var logger = NLog.Web.NLogBuilder.ConfigureNLog(path).GetCurrentClassLogger();
             logger.Info("Begin program.");
 
@@ -42,12 +43,21 @@ namespace movie_library
                             string line = sr.ReadLine();
                             string[] infoArray = line.Split(',');
 
-                            // movieID and title
-                            string movieID = infoArray[0];
-                            string title = infoArray[1];
+                            // movieID (before first comma)
+                            string movieID = infoArray[0]; 
+
+                            // title (everything between first comma and last comma)
+                            string title = ""; 
+                            for (int i = 1; i < (infoArray.Length - 1); i++) {
+                                // reinsert any missing commas into title
+                                if (i != (infoArray.Length - 2)) 
+                                    title += infoArray[i] + ",";
+                                else
+                                    title += infoArray[i]; // no extra comma to the end of the title
+                            }
                             
-                            // genres
-                            string genreList = infoArray[2];
+                            // genres (after last comma)
+                            string genreList = infoArray[(infoArray.Length - 1)]; 
                             string[] genreArray = genreList.Split('|');
                             string seperator = ", ";
                             string genres = "";

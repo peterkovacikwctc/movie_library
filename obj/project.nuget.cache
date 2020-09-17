@@ -1,21 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "noRv+8eY90b73vK4ODYwo+lglvV4k56SH4YiERrzZCyKSJyaaHkcfbBz+KlSC32jUwY9C1TUYv7wdb6gS8/vug==",
+  "dgSpecHash": "Qg1Gnn6VF/q+ByN+UUCDVHnFV4FeCdChG0Et/DxGaOam1oqt4Zisb/Jo+Ko2WagkLG7/NW0F1LXGDLUY5o1roQ==",
   "success": true,
-  "projectFilePath": "/Users/peterkovacik/Documents/WCTC/dotNet database/movie_library/movie_library.csproj",
+  "projectFilePath": "C:\\Users\\Peter Kovacik\\Documents\\DOTNET_projects\\04_movie_library\\movie_library\\movie_library.csproj",
   "expectedPackageFiles": [
-    "/Users/peterkovacik/.nuget/packages/microsoft.extensions.configuration/3.0.0/microsoft.extensions.configuration.3.0.0.nupkg.sha512",
-    "/Users/peterkovacik/.nuget/packages/microsoft.extensions.configuration.abstractions/3.0.0/microsoft.extensions.configuration.abstractions.3.0.0.nupkg.sha512",
-    "/Users/peterkovacik/.nuget/packages/microsoft.extensions.configuration.binder/3.0.0/microsoft.extensions.configuration.binder.3.0.0.nupkg.sha512",
-    "/Users/peterkovacik/.nuget/packages/microsoft.extensions.dependencyinjection/3.0.0/microsoft.extensions.dependencyinjection.3.0.0.nupkg.sha512",
-    "/Users/peterkovacik/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/3.0.0/microsoft.extensions.dependencyinjection.abstractions.3.0.0.nupkg.sha512",
-    "/Users/peterkovacik/.nuget/packages/microsoft.extensions.logging/3.0.0/microsoft.extensions.logging.3.0.0.nupkg.sha512",
-    "/Users/peterkovacik/.nuget/packages/microsoft.extensions.logging.abstractions/3.0.0/microsoft.extensions.logging.abstractions.3.0.0.nupkg.sha512",
-    "/Users/peterkovacik/.nuget/packages/microsoft.extensions.options/3.0.0/microsoft.extensions.options.3.0.0.nupkg.sha512",
-    "/Users/peterkovacik/.nuget/packages/microsoft.extensions.primitives/3.0.0/microsoft.extensions.primitives.3.0.0.nupkg.sha512",
-    "/Users/peterkovacik/.nuget/packages/nlog/4.7.2/nlog.4.7.2.nupkg.sha512",
-    "/Users/peterkovacik/.nuget/packages/nlog.extensions.logging/1.6.4/nlog.extensions.logging.1.6.4.nupkg.sha512",
-    "/Users/peterkovacik/.nuget/packages/nlog.web.aspnetcore/4.9.3/nlog.web.aspnetcore.4.9.3.nupkg.sha512"
+    "C:\\Users\\Peter Kovacik\\.nuget\\packages\\microsoft.extensions.configuration\\3.0.0\\microsoft.extensions.configuration.3.0.0.nupkg.sha512",
+    "C:\\Users\\Peter Kovacik\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.0.0\\microsoft.extensions.configuration.abstractions.3.0.0.nupkg.sha512",
+    "C:\\Users\\Peter Kovacik\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.0.0\\microsoft.extensions.configuration.binder.3.0.0.nupkg.sha512",
+    "C:\\Users\\Peter Kovacik\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.0.0\\microsoft.extensions.dependencyinjection.3.0.0.nupkg.sha512",
+    "C:\\Users\\Peter Kovacik\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.0.0\\microsoft.extensions.dependencyinjection.abstractions.3.0.0.nupkg.sha512",
+    "C:\\Users\\Peter Kovacik\\.nuget\\packages\\microsoft.extensions.logging\\3.0.0\\microsoft.extensions.logging.3.0.0.nupkg.sha512",
+    "C:\\Users\\Peter Kovacik\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.0.0\\microsoft.extensions.logging.abstractions.3.0.0.nupkg.sha512",
+    "C:\\Users\\Peter Kovacik\\.nuget\\packages\\microsoft.extensions.options\\3.0.0\\microsoft.extensions.options.3.0.0.nupkg.sha512",
+    "C:\\Users\\Peter Kovacik\\.nuget\\packages\\microsoft.extensions.primitives\\3.0.0\\microsoft.extensions.primitives.3.0.0.nupkg.sha512",
+    "C:\\Users\\Peter Kovacik\\.nuget\\packages\\nlog\\4.7.2\\nlog.4.7.2.nupkg.sha512",
+    "C:\\Users\\Peter Kovacik\\.nuget\\packages\\nlog.extensions.logging\\1.6.4\\nlog.extensions.logging.1.6.4.nupkg.sha512",
+    "C:\\Users\\Peter Kovacik\\.nuget\\packages\\nlog.web.aspnetcore\\4.9.3\\nlog.web.aspnetcore.4.9.3.nupkg.sha512"
   ],
   "logs": []
 }

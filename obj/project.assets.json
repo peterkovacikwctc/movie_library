@@ -362,28 +362,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/peterkovacik/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\Peter Kovacik\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/peterkovacik/Documents/WCTC/dotNet database/movie_library/movie_library.csproj",
+      "projectUniqueName": "C:\\Users\\Peter Kovacik\\Documents\\DOTNET_projects\\04_movie_library\\movie_library\\movie_library.csproj",
       "projectName": "movie_library",
-      "projectPath": "/Users/peterkovacik/Documents/WCTC/dotNet database/movie_library/movie_library.csproj",
-      "packagesPath": "/Users/peterkovacik/.nuget/packages/",
-      "outputPath": "/Users/peterkovacik/Documents/WCTC/dotNet database/movie_library/obj/",
+      "projectPath": "C:\\Users\\Peter Kovacik\\Documents\\DOTNET_projects\\04_movie_library\\movie_library\\movie_library.csproj",
+      "packagesPath": "C:\\Users\\Peter Kovacik\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Peter Kovacik\\Documents\\DOTNET_projects\\04_movie_library\\movie_library\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "/Users/peterkovacik/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Peter Kovacik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -420,7 +418,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.401/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
