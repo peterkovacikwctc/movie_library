@@ -76,71 +76,76 @@ namespace movie_library
 
                 // add another movie to the file
                 else if (choice == "2") {
-                    //movieID will be assigned by counting movies in library
-                    Console.WriteLine("Enter the Movie ID: ");
-                    string movieID = Console.ReadLine();
+                    try {
+                        //movieID will be assigned by counting movies in library
+                        Console.WriteLine("Enter the Movie ID: ");
+                        string movieID = Console.ReadLine();
 
-                    // ask user for name of title
-                    Console.WriteLine("Enter the title of the movie: ");
-                    string title = Console.ReadLine();
+                        // ask user for name of title
+                        Console.WriteLine("Enter the title of the movie: ");
+                        string title = Console.ReadLine();
 
-                    // ask user for genres
-                    Console.WriteLine("Enter the genre of the movie: ");
-                    string genres = Console.ReadLine();
+                        // ask user for genres
+                        Console.WriteLine("Enter the genre of the movie: ");
+                        string genres = Console.ReadLine();
 
-                    // add additional genres
-                    string addGenre;
-                    do {
-                        Console.WriteLine("\nWould you like to add another movie genre?");
-                        Console.WriteLine("1) yes");
-                        Console.WriteLine("2) no");
-                        addGenre = Console.ReadLine();
+                        // add additional genres
+                        string addGenre;
+                        do {
+                            Console.WriteLine("\nWould you like to add another movie genre?");
+                            Console.WriteLine("1) yes");
+                            Console.WriteLine("2) no");
+                            addGenre = Console.ReadLine();
 
-                        if (addGenre == "1") {
-                            // ask user for additional genres
-                            Console.WriteLine("Enter the next genre of the movie: ");
-                            string tempGenre = Console.ReadLine();
-                            genres += "|" + tempGenre;
+                            if (addGenre == "1") {
+                                // ask user for additional genres
+                                Console.WriteLine("Enter the next genre of the movie: ");
+                                string tempGenre = Console.ReadLine();
+                                genres += "|" + tempGenre;
+                            }
+
+                        } while (addGenre == "1");
+
+                        // check to see if the same movie exists in library
+                        Boolean movieExists = true;
+                        StreamReader sr = new StreamReader(file);
+                        sr.ReadLine(); // skip first line of document
+
+                        while (!sr.EndOfStream) {
+                            string line = sr.ReadLine();
+                            string[] infoArray = line.Split(',');
+
+                            // get movie title
+                            string titleInLibrary = ""; 
+                            for (int i = 1; i < (infoArray.Length - 1); i++) {
+                                // reinsert any missing commas into title
+                                if (i != (infoArray.Length - 2)) 
+                                    titleInLibrary += infoArray[i] + ",";
+                                else
+                                    titleInLibrary += infoArray[i]; // no extra comma to the end of the title
+                            }
+
+                            // check for duplicate title each iteration
+                            if(title.Equals(titleInLibrary)) {
+                                Console.WriteLine($"\n{title} is already in the library and cannot be added.\n");
+                                movieExists = true;
+                                break;
+                            }
+                            else {movieExists = false;}
                         }
+                        sr.Close();
 
-                    } while (addGenre == "1");
-
-                    // check to see if the same movie exists in library
-                    Boolean movieExists = true;
-                    StreamReader sr = new StreamReader(file);
-                    sr.ReadLine(); // skip first line of document
-
-                    while (!sr.EndOfStream) {
-                        string line = sr.ReadLine();
-                        string[] infoArray = line.Split(',');
-
-                        // get movie title
-                        string titleInLibrary = ""; 
-                        for (int i = 1; i < (infoArray.Length - 1); i++) {
-                            // reinsert any missing commas into title
-                            if (i != (infoArray.Length - 2)) 
-                                titleInLibrary += infoArray[i] + ",";
-                            else
-                                titleInLibrary += infoArray[i]; // no extra comma to the end of the title
+                        // write movie to file if it does not previously exist in library
+                        if (movieExists == false) {
+                            StreamWriter sw = new StreamWriter(file, append: true);
+                            sw.WriteLine(movieID + "," + title + "," + genres);
+                            sw.Close();
                         }
-
-                        // check for duplicate title each iteration
-                        if(title.Equals(titleInLibrary)) {
-                            Console.WriteLine($"\n{title} is already in the library and cannot be added.\n");
-                            movieExists = true;
-                            break;
-                        }
-                        else {movieExists = false;}
+                        Console.WriteLine("");
                     }
-                    sr.Close();
-
-                    // write movie to file if it does not previously exist in library
-                    if (movieExists == false) {
-                        StreamWriter sw = new StreamWriter(file, append: true);
-                        sw.WriteLine(movieID + "," + title + "," + genres);
-                        sw.Close();
+                     catch (Exception e) {
+                        logger.Error(e.Message);
                     }
-                    Console.WriteLine("");
                 }
                 // choice other than 1 or 2 to exit program
                 else {
